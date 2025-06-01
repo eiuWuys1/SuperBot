@@ -10,6 +10,7 @@
 🛡️ **Super Bot là mã nguồn mở, hoàn toàn minh bạch, do chính bạn tự chạy.**
 Không gửi dữ liệu ra ngoài, không theo dõi, không lưu trữ. Bạn **toàn quyền kiểm soát**, từ token đến hành vi của bot.
 
+
 ## 😫 Bạn đau khổ vì phải tự chỉnh quyền từng kênh bằng tay?
 
 * Bạn mệt mỏi khi phải **chỉnh quyền thủ công cho từng role trên từng kênh**?
@@ -20,6 +21,26 @@ Không gửi dữ liệu ra ngoài, không theo dõi, không lưu trữ. Bạn *
 🎉 **Đừng lo! Super Bot có thể giúp bạn giải quyết tất cả chỉ với vài lệnh đơn giản.**
 Dành cho những admin bận rộn nhưng vẫn muốn server chuyên nghiệp, gọn gàng và dễ quản lý.
 
+
+## 💡 Nếu bạn "phá nát" quyền kênh – đã có `fix.py` cứu cánh
+
+Trong quá trình sử dụng, nếu bạn **lỡ tay chỉnh sai quyền** (ví dụ: tất cả kênh không còn ai có quyền xem lịch sử tin nhắn), đừng hoảng!
+
+🛠️ Super Bot đi kèm với một file tên là **`fix.py`**, có thể giúp bạn khôi phục lại quyền cơ bản cho các role hoặc kênh bị lỗi.
+
+📥 **Chỉ cần:**
+
+1. Tải file `fix.py` từ repo.
+2. Thêm token bot vào trong đó.
+3. Chạy script bằng Python:
+
+```bash
+python fix.py
+```
+
+Và bot sẽ **quét toàn bộ kênh và sửa lại quyền** giúp bạn. Không cần phải chỉnh tay từng cái một nữa!
+
+
 ## 🧠 Super Bot hoạt động như thế nào?
 
 Super Bot được thiết kế để chạy **đa bot**, **tự động hóa cao**, với khả năng quản lý và phản hồi cực kỳ nhanh chóng:
@@ -29,6 +50,7 @@ Super Bot được thiết kế để chạy **đa bot**, **tự động hóa ca
 * **Gửi tin định kỳ:** Mỗi 30 phút, bot gửi một tin nhắn `"Mình đang online nè 👀"` để duy trì tương tác.
 * **Thao tác quyền:** Chỉnh sửa quyền truy cập của nhiều role trên nhiều kênh trong vài giây.
 * **Dọn dẹp kênh:** Xóa toàn bộ tin nhắn trong một kênh bằng một dòng lệnh duy nhất.
+
 
 ## 🛠️ Hướng dẫn tạo bot Discord
 
@@ -92,12 +114,12 @@ Thiết lập quyền hàng loạt:
    * `2`: Full chat.
    * `3`: Ẩn kênh với role đó.
 
----
 
 ### `!delete`
 
 Xóa toàn bộ tin nhắn trong kênh (qua chọn danh sách hoặc tag kênh trực tiếp).
 
+---
 
 ## ❓ CÂU HỎI THƯỜNG GẶP (FAQ)
 
@@ -117,6 +139,7 @@ Kiểm tra:
 * Token có hợp lệ không?
 * Server có kick bot không?
 
+
 ## 👨‍💻 Được lập trình bởi **Wuys**
 
 Super Bot được phát triển bởi **Wuys** – một lập trình viên đam mê sự tiện dụng và tự động hóa.
@@ -133,6 +156,7 @@ Super Bot được phát triển bởi **Wuys** – một lập trình viên đa
 * `on_message()`: Phản hồi khi được tag.
 * `!setup`, `!chat`, `!delete`: Những công cụ quản trị cực nhanh và tiện.
 
+
 ## ✅ Tổng kết
 
 **Super Bot** là công cụ lý tưởng cho mọi quản trị viên Discord:
@@ -141,5 +165,11 @@ Super Bot được phát triển bởi **Wuys** – một lập trình viên đa
 > 🚀 Nhanh gọn – Thiết lập mọi thứ chỉ trong vài giây
 > 🤝 Đáng tin cậy – Mã nguồn mở, không ẩn ý
 
+
+
 📬 **Liên hệ Wuys nếu bạn muốn mở rộng thêm AI, tích hợp cơ sở dữ liệu hoặc các tính năng nâng cao.**
+
+
+🔧 Và nếu bạn lỡ tay phá quyền?
+Đã có `fix.py` đứng sau bạn. ✌️
 
