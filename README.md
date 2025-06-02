@@ -1,6 +1,4 @@
 
-
-```
 # 🤖 SUPER BOT – TRỢ LÝ QUẢN TRỊ DISCORD TOÀN DIỆN
 
 ## 🚀 Phiên bản chính thức 1.0
