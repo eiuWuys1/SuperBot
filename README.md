@@ -1,175 +1,138 @@
 
+
+```
 # 🤖 SUPER BOT – TRỢ LÝ QUẢN TRỊ DISCORD TOÀN DIỆN
 
-## 😰 Bạn có sợ dùng những con bot "không rõ nguồn gốc"?
+## 🚀 Phiên bản chính thức 1.0
 
-* Bot lạ mời vào server, không biết **nó có làm gì sau lưng mình không**?
-* Bot không rõ ai viết, **ẩn mã nguồn**, có thể **đọc, ghi, hoặc theo dõi** các kênh quan trọng?
-* Giao toàn bộ quyền quản trị cho một thứ **không kiểm soát được**?
+Super Bot là một công cụ quản trị Discord mạnh mẽ, mã nguồn mở, được thiết kế dành cho các admin bận rộn nhưng vẫn mong muốn server gọn gàng, an toàn và dễ kiểm soát.
 
-🛡️ **Super Bot là mã nguồn mở, hoàn toàn minh bạch, do chính bạn tự chạy.**
-Không gửi dữ liệu ra ngoài, không theo dõi, không lưu trữ. Bạn **toàn quyền kiểm soát**, từ token đến hành vi của bot.
+---
 
+## 🛡️ Vì sao chọn Super Bot?
 
-## 😫 Bạn đau khổ vì phải tự chỉnh quyền từng kênh bằng tay?
+- **Mã nguồn mở**: Tự chạy, không gửi dữ liệu ra ngoài.
+- **Toàn quyền kiểm soát**: Không phụ thuộc bot lạ, bạn kiểm soát hoàn toàn hành vi và token.
+- **Dễ sử dụng**: Quản lý quyền, kênh, và tin nhắn chỉ bằng vài lệnh đơn giản.
+- **Hỗ trợ đa bot**: Chạy nhiều bot cùng lúc chỉ bằng `tokens.txt`.
 
-* Bạn mệt mỏi khi phải **chỉnh quyền thủ công cho từng role trên từng kênh**?
-* Server của bạn quá lớn và việc **gửi thông báo đồng loạt trở nên rối rắm**?
-* Bạn muốn **ẩn kênh, mở kênh**, hoặc **gửi tin nhắn tự động** nhưng không muốn code phức tạp?
-* Mỗi lần dọn dẹp kênh chat lại phải **xóa tin nhắn từng dòng thủ công**?
+---
 
-🎉 **Đừng lo! Super Bot có thể giúp bạn giải quyết tất cả chỉ với vài lệnh đơn giản.**
-Dành cho những admin bận rộn nhưng vẫn muốn server chuyên nghiệp, gọn gàng và dễ quản lý.
+## ✨ Tính năng nổi bật
 
+- 🎯 **Quản lý quyền**: Chỉnh hàng loạt quyền role trên nhiều kênh.
+- 🧹 **Dọn dẹp tin nhắn**: Xóa toàn bộ tin nhắn trong kênh cực nhanh.
+- 📢 **Gửi tin tự động**: 30 phút/lần gửi tin “Mình đang online nè 👀”.
+- 📎 **Phản hồi khi được tag**: Trả lời thân thiện khi được nhắc tên.
+- 💬 **Chức năng vui vẻ**: Phản hồi ngẫu nhiên khi bị gọi “bot gay”, “bot ngu”.
+- 🛠️ **fix.py tích hợp (hoặc `!fix`)**: Sửa lỗi quyền kênh nhanh chóng.
+- 🚨 **`!fixfull`**: Cấp full quyền khẩn cấp cho toàn bộ role (ngoại trừ @everyone).
 
-## 💡 Nếu bạn "phá nát" quyền kênh – đã có `fix.py` cứu cánh
+---
 
-Trong quá trình sử dụng, nếu bạn **lỡ tay chỉnh sai quyền** (ví dụ: tất cả kênh không còn ai có quyền xem lịch sử tin nhắn), đừng hoảng!
+## 🧠 Cách hoạt động
 
-🛠️ Super Bot đi kèm với một file tên là **`fix.py`**, có thể giúp bạn khôi phục lại quyền cơ bản cho các role hoặc kênh bị lỗi.
+- Đọc các token từ `tokens.txt`.
+- Mỗi token khởi tạo một bot riêng.
+- Mỗi bot phản hồi, kiểm tra, gửi tin nhắn định kỳ và thực thi các lệnh.
 
-📥 **Chỉ cần:**
+---
 
-1. Tải file `fix.py` từ repo.
-2. Thêm token bot vào trong đó.
-3. Chạy script bằng Python:
+## ⚙️ Hướng dẫn sử dụng
 
-```bash
-python fix.py
+### 1. Cài đặt thư viện
 ```
-
-Và bot sẽ **quét toàn bộ kênh và sửa lại quyền** giúp bạn. Không cần phải chỉnh tay từng cái một nữa!
-
-
-## 🧠 Super Bot hoạt động như thế nào?
-
-Super Bot được thiết kế để chạy **đa bot**, **tự động hóa cao**, với khả năng quản lý và phản hồi cực kỳ nhanh chóng:
-
-* **Đa bot:** Tự động khởi tạo nhiều bot từ file `tokens.txt`.
-* **Tự động phản hồi:** Khi được nhắc tên (@mention), bot lập tức trả lời lại một cách thân thiện.
-* **Gửi tin định kỳ:** Mỗi 30 phút, bot gửi một tin nhắn `"Mình đang online nè 👀"` để duy trì tương tác.
-* **Thao tác quyền:** Chỉnh sửa quyền truy cập của nhiều role trên nhiều kênh trong vài giây.
-* **Dọn dẹp kênh:** Xóa toàn bộ tin nhắn trong một kênh bằng một dòng lệnh duy nhất.
-
-
-## 🛠️ Hướng dẫn tạo bot Discord
-
-### 1. Tạo ứng dụng và bot
-
-1. Vào trang: [Discord Developer Portal](https://discord.com/developers/applications)
-2. Nhấn **“New Application”**, đặt tên bot.
-3. Vào tab **“Bot”**, chọn **“Add Bot”** → xác nhận.
-
-### 2. Lấy token bot
-
-* Trong tab **Bot**, nhấn nút **“Copy”** ở phần **Token**.
-* Dán vào file `tokens.txt` (mỗi dòng một token nếu bạn dùng nhiều bot).
-
-### 3. Cấp quyền cho bot vào server
-
-Vào tab **OAuth2 > URL Generator**:
-
-* Tick: `bot`, `applications.commands`
-* Tick các quyền: `Send Messages`, `Manage Channels`, `Manage Roles`, `Read Messages`, `Add Reactions`, `Attach Files`, v.v...
-* Copy URL → Dán vào trình duyệt → Mời bot vào server.
-
-
-## ▶️ Cài đặt & chạy bot
-
-### 1. Cài thư viện cần thiết
-
-```bash
 pip install discord.py
+````
+
+### 2. Tạo `tokens.txt`
+
+Mỗi dòng một token bot:
+
 ```
-
-### 2. Tạo file `tokens.txt`
-
-* Mỗi dòng là một token bot bạn muốn chạy.
+token_bot_1
+token_bot_2
+...
+```
 
 ### 3. Chạy bot
 
-```bash
+```
 python super_bot.py
 ```
 
 
-## ⚙️ Lệnh điều khiển bot
+## 📌 Các lệnh chính
 
-### `!chat <#kênh hoặc ID> <nội dung>`
+| Lệnh                               | Mô tả                                    |
+| ---------------------------------- | ---------------------------------------- |
+| `!chat <#kênh hoặc ID> <nội dung>` | Gửi tin nhắn đến kênh chỉ định           |
+| `!setup`                           | Thiết lập quyền hàng loạt theo role/kênh |
+| `!delete`                          | Xóa toàn bộ tin nhắn trong một kênh      |
+| `!fix`                             | Khôi phục quyền xem lịch sử tin nhắn     |
+| `!fixfull`                         | Cấp full quyền cho tất cả roles          |
+| `!fun`                             | Gửi câu nói ngẫu nhiên dễ thương         |
+| `!version`                         | Xem phiên bản bot hiện tại               |
 
-Gửi tin nhắn đến kênh được chỉ định.
+---
 
-> Ví dụ: `!chat #general Chào mọi người!`
+## 🔧 Sử dụng lệnh `!setup` như thế nào?
 
-
-### `!setup`
-
-Thiết lập quyền hàng loạt:
-
-1. Chọn **role** cần áp dụng.
-2. Chọn **kênh** muốn chỉnh.
+1. Bot gửi danh sách role và channel để chọn.
+2. Nhập số tương ứng với role và kênh bạn muốn chỉnh (cách nhau bằng dấu phẩy).
 3. Chọn chế độ:
 
    * `1`: Chỉ xem + react.
    * `2`: Full chat.
    * `3`: Ẩn kênh với role đó.
-
-
-### `!delete`
-
-Xóa toàn bộ tin nhắn trong kênh (qua chọn danh sách hoặc tag kênh trực tiếp).
+4. Bot tự động thiết lập trong vài giây.
 
 ---
 
-## ❓ CÂU HỎI THƯỜNG GẶP (FAQ)
+## 🆘 Cứu hộ: `!fix` hoặc `fix.py`
+
+Nếu lỡ tay phá quyền, không còn thấy được kênh nào:
+
+* Dùng lệnh `!fix` trong server có bot.
+* Hoặc:
+
+```
+python fix.py
+```
+Bot sẽ tự động khôi phục quyền cơ bản cho mọi role trên các kênh.
+
+## ❓ Câu hỏi thường gặp (FAQ)
 
 ### 🔹 Bot có lưu dữ liệu không?
 
-Không. Mọi thao tác được xử lý thời gian thực, không lưu trữ.
+❌ Không. Mọi thao tác đều real-time và không lưu trữ.
 
-### 🔹 Có thể dùng nhiều bot một lúc không?
+### 🔹 Có dùng được nhiều bot không?
 
-Có. Chỉ cần thêm token mới vào `tokens.txt`.
+✅ Có! Chỉ cần thêm nhiều dòng vào `tokens.txt`.
 
-### 🔹 Tại sao bot không gửi được tin nhắn?
+### 🔹 Bot không gửi được tin nhắn?
 
-Kiểm tra:
-
-* Bot có quyền gửi tin ở kênh đó không?
-* Token có hợp lệ không?
+* Kiểm tra quyền gửi tin của bot.
+* Kiểm tra token có đúng không.
 * Server có kick bot không?
 
+## 👨‍💻 Tác giả
 
-## 👨‍💻 Được lập trình bởi **Wuys**
+Phát triển bởi **Wuys** – đam mê tiện ích và tự động hóa.
 
-Super Bot được phát triển bởi **Wuys** – một lập trình viên đam mê sự tiện dụng và tự động hóa.
+### Công nghệ:
 
-### 🧩 Công nghệ:
-
-* **Ngôn ngữ:** Python 3.8+
-* **Thư viện:** [`discord.py`](https://pypi.org/project/discord.py/)
-
-### 📐 Cấu trúc thông minh:
-
-* `setup_bot(token)`: Khởi tạo bot theo từng token.
-* `on_ready()`: Đặt trạng thái, tự gửi tin định kỳ.
-* `on_message()`: Phản hồi khi được tag.
-* `!setup`, `!chat`, `!delete`: Những công cụ quản trị cực nhanh và tiện.
-
+* Ngôn ngữ: Python 3.8+
+* Thư viện: `discord.py`
 
 ## ✅ Tổng kết
 
-**Super Bot** là công cụ lý tưởng cho mọi quản trị viên Discord:
+* ✨ Dễ dùng – Không cần biết code
+* 🚀 Nhanh gọn – Thiết lập trong vài giây
+* 🤝 Đáng tin cậy – Mã nguồn mở minh bạch
 
-> ✨ Dễ dùng – Không cần biết code
-> 🚀 Nhanh gọn – Thiết lập mọi thứ chỉ trong vài giây
-> 🤝 Đáng tin cậy – Mã nguồn mở, không ẩn ý
+📬 Liên hệ tác giả để mở rộng thêm AI, database hoặc chức năng cao cấp khác.
 
-
-
-📬 **Liên hệ Wuys nếu bạn muốn mở rộng thêm AI, tích hợp cơ sở dữ liệu hoặc các tính năng nâng cao.**
-
-
-🔧 Và nếu bạn lỡ tay phá quyền?
-Đã có `fix.py` đứng sau bạn. ✌️
+**Nếu bạn lỡ phá quyền?** Yên tâm, đã có `!fix` hoặc `fix.py` lo hết! ✌️
 
